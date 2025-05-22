@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cal.css">
+</head>
+
+<body>
+    <div class="conatiner">
+        <input type="text"  name="" id="display">
+        <div class="button" style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <button onclick="myvalue('7')">7</button>
+            <button onclick="myvalue('8')">8</button>
+            <button onclick="myvalue('9')">9</button>
+            <button onclick="myvalue('/')">/</button>
+
+            <button onclick="myvalue('4')">4</button>
+            <button onclick="myvalue('5')">5</button>
+            <button onclick="myvalue('6')">6</button>
+            <button onclick="myvalue('*')">*</button>
+
+
+            <button onclick="myvalue('1')">1</button>
+            <button onclick="myvalue('2')">2</button>
+            <button onclick="myvalue('3')">3</button>
+            <button onclick="myvalue('-')">-</button>
+
+            <button style="background-color: rgb(204, 74, 74); color: white;" onclick="del()">C</button>
+            <button onclick="myvalue('0')">0</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="myvalue('+')">+</button>
+
+
+        </div>
+    </div>
+</body>
+
+<script>
+    function myvalue(val) {
+        document.getElementById('display').value += val;
+    }
+    function calculate() {
+        let z = document.getElementById('display').value;
+        let result = eval(z);
+        document.getElementById('display').value = result;
+    }
+    function del() {
+        document.getElementById('display').value = '';
+    }
+</script>
+
+</html>
